@@ -1,27 +1,29 @@
 {
   "name": "adrianbarnes-hummingtest",
-  "author": "Adrian Barnes <npm@adrianbarn.es> (https://adrianbarn.es)",
   "version": "0.0.4",
   "description": "",
+  "author": "Adrian Barnes <npm@adrianbarn.es> (https://adrianbarn.es)",
+  "scripts": {
+    "serve": "vue-cli-service serve dev/serve.js",
+    "build": "cross-env NODE_ENV=production rollup --config build/rollup.config.js",
+    "build-storybook": "build-storybook",
+    "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
+    "build:ssr": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format cjs",
+    "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife",
+    "prebuild": "rimraf ./dist",
+    "start": "npm run serve",
+    "storybook": "start-storybook -p 6006"
+  },
   "main": "dist/hummingtest.ssr.js",
-  "browser": "dist/hummingtest.esm.js",
   "module": "dist/hummingtest.esm.js",
+  "browser": "dist/hummingtest.esm.js",
   "unpkg": "dist/hummingtest.min.js",
   "files": [
     "dist/*",
     "src/**/*.vue"
   ],
-  "sideEffects": false,
-  "scripts": {
-    "start": "npm run serve",
-    "serve": "vue-cli-service serve dev/serve.js",
-    "prebuild": "rimraf ./dist",
-    "build": "cross-env NODE_ENV=production rollup --config build/rollup.config.js",
-    "build:ssr": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format cjs",
-    "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
-    "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+  "dependencies": {
+    "vuetify": "^2.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
@@ -44,9 +46,13 @@
     "rollup": "^2.52.8",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-vue": "^5.1.9",
+    "sass": "~1.32.0",
+    "sass-loader": "^10.0.0",
     "vue": "^2.6.14",
+    "vue-cli-plugin-vuetify": "~2.4.4",
     "vue-loader": "^15.9.8",
-    "vue-template-compiler": "^2.6.14"
+    "vue-template-compiler": "^2.6.14",
+    "vuetify-loader": "^1.7.0"
   },
   "peerDependencies": {
     "vue": "^2.6.14"
@@ -54,5 +60,5 @@
   "engines": {
     "node": ">=12"
   },
-  "dependencies": {}
+  "sideEffects": false
 }

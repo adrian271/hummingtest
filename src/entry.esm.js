@@ -1,6 +1,7 @@
-
 // Import vue components
-import * as components from '@/lib-components/index';
+import * as components from "@/lib-components/index";
+
+console.log(components);
 
 // install function executed by Vue.use()
 const install = function installHummingtest(Vue) {
@@ -14,4 +15,4 @@ export default install;
 
 // To allow individual component use, export components
 // each can be registered via Vue.component()
-export * from '@/lib-components/index';
+export * from "@/lib-components/index";
