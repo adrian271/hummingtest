@@ -2,7 +2,7 @@ import HbButton from "../lib-components/HbButton.vue";
 
 // More on default export: https://storybook.js.org/docs/vue/writing-stories/introduction#default-export
 export default {
-  title: "Hb-Button",
+  title: "Components/Hb-Button",
   component: HbButton,
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {
