@@ -1,15 +1,15 @@
-import HbButton from '../lib-components/HbButton.vue';
+import HbButton from "../lib-components/HbButton.vue";
 
 // More on default export: https://storybook.js.org/docs/vue/writing-stories/introduction#default-export
 export default {
-  title: 'Hb-Button',
+  title: "Hb-Button",
   component: HbButton,
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {
-    backgroundColor: { control: 'color' },
+    backgroundColor: { control: "color" },
     size: {
-      control: { type: 'select' },
-      options: ['small', 'medium', 'large'],
+      control: { type: "select" },
+      options: ["small", "medium", "large"],
     },
   },
 };
@@ -18,14 +18,14 @@ export default {
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { HbButton },
-  template: '<hb-button @onClick="onClick" v-bind="$props" />',
+  template: '<hb-button v-bind="$props">{{label}}</hb-button>',
 });
 
 export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/vue/writing-stories/args
 Primary.args = {
   color: "primary",
-  label: 'Button',
+  label: "Button",
 };
 
 // export const Secondary = Template.bind({});

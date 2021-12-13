@@ -140,7 +140,7 @@
 import HbIcon from "./HbIcon.vue";
 
 export default {
-  name: "HbBtn",
+  name: "HbButton",
   data: function () {
     return {
       toggle: false,

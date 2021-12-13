@@ -1,6 +1,6 @@
 {
   "name": "adrianbarnes-hummingtest",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "",
   "author": "Adrian Barnes <npm@adrianbarn.es> (https://adrianbarn.es)",
   "scripts": {
@@ -23,6 +23,8 @@
     "src/**/*.vue"
   ],
   "dependencies": {
+    "@socheatsok78/storybook-addon-vuetify": "^0.1.9",
+    "@storybook/addon-storysource": "^6.4.9",
     "vuetify": "^2.4.0"
   },
   "devDependencies": {
