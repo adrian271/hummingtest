@@ -6,10 +6,10 @@ export default {
   component: HbButton,
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {
-    backgroundColor: { control: "color" },
-    size: {
+    // backgroundColor: { control: "color" },
+    Size: {
       control: { type: "select" },
-      options: ["small", "medium", "large"],
+      options: ["x-small", "small", "default", "large"],
     },
   },
 };
@@ -25,13 +25,13 @@ export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/vue/writing-stories/args
 Primary.args = {
   color: "primary",
-  label: "Button",
+  label: "Change Me!",
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
   color: "secondary",
-  label: "Button",
+  label: "Change Me!",
 };
 
 // export const Secondary = Template.bind({});
