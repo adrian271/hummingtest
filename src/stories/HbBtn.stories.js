@@ -28,6 +28,12 @@ Primary.args = {
   label: "Button",
 };
 
+export const Secondary = Template.bind({});
+Secondary.args = {
+  color: "secondary",
+  label: "Button",
+};
+
 // export const Secondary = Template.bind({});
 // Secondary.args = {
 //   label: 'Button',
