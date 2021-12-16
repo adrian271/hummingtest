@@ -1,5 +1,17 @@
 import HbButton from "../lib-components/HbButton.vue";
 
+let snippetCreate = (str) => {
+  var newStr = str.replace(/>/g, "&gt;");
+  newStr = newStr.replace(/</g, "&lt;");
+  newStr = newStr.replace(/"/g, "&quot;");
+  newStr = newStr.replace(/'/g, "&apos;");
+  //newStr = newStr.replace( /&/g,'&amp;');
+  return newStr;
+};
+
+let compCode = '<hb-button v-bind="$props">{{label}}</hb-button>';
+let snippet = `<br/><code>${snippetCreate(compCode)}</code>`;
+
 // More on default export: https://storybook.js.org/docs/vue/writing-stories/introduction#default-export
 export default {
   title: "Components/Hb-Button",
@@ -18,7 +30,7 @@ export default {
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { HbButton },
-  template: '<hb-button v-bind="$props">{{label}}</hb-button>',
+  template: `<div>${compCode}${snippet}<div>`,
 });
 
 export const Primary = Template.bind({});
