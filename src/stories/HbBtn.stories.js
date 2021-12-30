@@ -11,7 +11,7 @@ let snippetCreate = (str) => {
 };
 
 let compCode = '<hb-button v-bind="$props">{{label}}</hb-button>';
-let snippet = `<hr style="margin-top:4rem"/><code>${snippetCreate(
+let snippet = `<hr style="margin:4rem 0"/><code style="padding: 2rem;">${snippetCreate(
   compCode
 )}</code>`;
 
@@ -40,13 +40,13 @@ export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/vue/writing-stories/args
 Primary.args = {
   color: "primary",
-  label: "Change Me!",
+  label: "Change Me in the panel below!",
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
   color: "secondary",
-  label: "Change Me!",
+  label: "Change Me in the panel below!",
 };
 
 // export const Secondary = Template.bind({});
