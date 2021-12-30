@@ -1,6 +1,6 @@
 export default `
 
-    <section>
+    <section style="margin:0">
       <h2> Sample Documentation</h2>
       <p>
         We recommend building UIs with a
