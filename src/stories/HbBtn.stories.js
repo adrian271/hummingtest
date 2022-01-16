@@ -1,5 +1,5 @@
 import HbButton from "../lib-components/HbButton.vue";
-import HbBtnDocs from "./HbBtnDocs.js";
+import HbButtonDocs from "./HbButtonDocs.js";
 
 let snippetCreate = (str) => {
   var newStr = str.replace(/>/g, "&gt;");
@@ -33,7 +33,7 @@ export default {
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { HbButton },
-  template: `<div>${compCode}${snippet}${HbBtnDocs}</div>`,
+  template: `<div>${compCode}${snippet}${HbButtonDocs}</div>`,
 });
 
 export const Primary = Template.bind({});
